@@ -23,7 +23,7 @@ export const RepoCard = ({ repo }) => {
 
   React.useEffect(() => {
     getOpenGraph(repo.html_url);
-  }, []);
+  }, [repo.html_url]);
 
   return (
     <div className="relative flex flex-col h-[20rem] w-72 border rounded shadow-lg">
