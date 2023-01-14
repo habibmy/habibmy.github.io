@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { Profile } from "../components/Profile";
 import { RepoCard } from "../components/RepoCard";
-import { url } from "../constants";
+import { reposUrl, profileUrl } from "../constants";
 
 export function App() {
   const [repos, setRepos] = useState([]);
+  const [profile, setProfile] = useState();
   useEffect(() => {
-    fetch(url)
+    fetch(profileUrl)
+      .then((response) => response.ok && response.json())
+      .then((json) => setProfile(json));
+    fetch(reposUrl)
       .then((response) => response.ok && response.json())
       .then((json) => setRepos(json));
   }, []);
@@ -15,7 +20,8 @@ export function App() {
   return (
     <div className="relative dark:bg-slate-800 dark:text-white">
       <Header />
-      <div className="pt-20 flex-col flex items-center">
+      <div className="pt-28 flex-col flex items-center">
+        {profile ? <Profile profile={profile} /> : <p>Loading...</p>}
         {repos.length === 0 ? (
           <p>Loading...</p>
         ) : (
