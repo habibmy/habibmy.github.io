@@ -3,6 +3,12 @@ name: Build and Deploy
 on:
   push:
     branches: ["main"]
+    paths:
+      - "src/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/build.yml"
+
   pull_request:
     branches: ["main"]
 
