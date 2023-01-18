@@ -1,4 +1,4 @@
-const username = 'aumirza'
+const username = process.env.REACT_APP_GITHUB_USERNAME
 export const reposUrl = `https://api.github.com/users/${username}/repos`
 export const profileUrl = `https://api.github.com/users/${username}`
 
