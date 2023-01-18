@@ -1,0 +1,19 @@
+name: Deploy to main repo
+
+on:
+  push:
+    branches: ["gh-pages"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      name: deploy changes to a repo
+      uses: tagus/git-deploy@v0.4.1
+      with:
+        changes: build
+        repository: git@github.com:aumirza/aumirza.github.io.git
+        ssh_key: ${{ secrets.REPO_DEPLOY_KEY }}
+        name: ${{GITHUB_ACTOR}}
+        email: ${{ secrets.EMAIL }}
+        clean_repo: true
