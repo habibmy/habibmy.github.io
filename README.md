@@ -12,7 +12,9 @@ A simple landing page for your github project.
 # How to use
 
 1. Fork this repo
-2. Add your github username to the .env file (REACT_APP_GITHUB_USERNAME)
+2. Open Repo setting -> Secrets and variables -> Actions.
+3. Open Variable tab and add a new repository varible.
+4. With name REACT_APP_GITHUB_USERNAME and value your_github_username.
 
 # How to deploy
 
