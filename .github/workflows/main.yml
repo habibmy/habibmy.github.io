@@ -31,7 +31,7 @@ jobs:
           REACT_APP_GITHUB_USERNAME: ${{ github.actor }}
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4.6.1
         with:
           token: ${{ secrets.TOKEN }}
           repository-name: ${{ secrets.REPO_NAME }}
