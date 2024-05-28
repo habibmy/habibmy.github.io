@@ -12,11 +12,11 @@ A simple landing page for your github project.
 # How to use
 
 1. Fork this repo
-2. Use name of the repo as <username>.github.io
+2. Use name of the repo as `<username>`.github.io
 
 # How to deploy
 
-1. Go to your <username>.github.io repo.
+1. Go to your `<username>`.github.io repo.
 2. Open repo settings.
 3. Scroll down to the GitHub Pages section
 4. Select the gh-pages branch
