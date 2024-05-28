@@ -8,9 +8,11 @@ on:
     #   - "package.json"
     #   - "package-lock.json"
     #   - ".github/workflows/main.yml"
-
+    
   pull_request:
     branches: ["main"]
+  
+  pull_request_target:
 
 permissions:
   contents: write
@@ -33,6 +35,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.6.1
         with:
-          token: ${{ secrets.TOKEN }}
-          repository-name: ${{ secrets.REPO_NAME }}
+          token: ${{ secrets.TOKEN || secrets.GITHUB_TOKEN  }}
+          repository-name: ${{ secrets.REPO_NAME || github.repository}}
           folder: build # The folder the action should deploy.
