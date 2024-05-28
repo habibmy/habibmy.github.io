@@ -12,13 +12,12 @@ A simple landing page for your github project.
 # How to use
 
 1. Fork this repo
-2. Open Repo setting -> Secrets and variables -> Actions.
-3. Open Variable tab and add a new repository varible.
-4. With name REACT_APP_GITHUB_USERNAME and value your_github_username.
+2. Use name of the repo as <username>.github.io
 
 # How to deploy
 
-1. Go to your repo settings
-2. Scroll down to the GitHub Pages section
-3. Select the gh-pages branch
-4. Click save
+1. Go to your <username>.github.io repo.
+2. Open repo settings.
+3. Scroll down to the GitHub Pages section
+4. Select the gh-pages branch
+5. Click save
