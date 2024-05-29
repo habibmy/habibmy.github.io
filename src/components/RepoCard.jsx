@@ -15,7 +15,6 @@ export const RepoCard = ({ repo }) => {
         const match = res.match(ogImageRegex);
         if (match) {
           const image = match[1];
-          console.log(image);
           setImage(image);
         }
       });
