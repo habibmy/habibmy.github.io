@@ -57,7 +57,7 @@ const Search = ({ repos, setFilteredRepos }) => {
       repo.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredRepos(filteredRepos);
-  }, [searchTerm, repos]);
+  }, [searchTerm, repos, setFilteredRepos]);
 
   return (
     <div className="border-b-2 focus-within:border-b-black flex my-5 transition-all">
