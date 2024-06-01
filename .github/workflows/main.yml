@@ -16,6 +16,8 @@ on:
   
   pull_request_target:
 
+  workflow_dispatch:
+
 permissions:
   contents: write
 
